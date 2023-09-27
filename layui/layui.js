@@ -4808,15 +4808,15 @@ layui.define(["layer", "util"], function (e) {
         T = "layui-this", $ = "layui-hide", E = "layui-disabled", t = function () {
             this.config = {
                 verify: {
-                    required: [/[\S]+/, "\u5fc5\u586b\u9879\u4e0d\u80fd\u4e3a\u7a7a"],
-                    phone: [/^1\d{10}$/, "\u8bf7\u8f93\u5165\u6b63\u786e\u7684\u624b\u673a\u53f7"],
-                    email: [/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/, "\u90ae\u7bb1\u683c\u5f0f\u4e0d\u6b63\u786e"],
-                    url: [/^(#|(http(s?)):\/\/|\/\/)[^\s]+\.[^\s]+$/, "\u94fe\u63a5\u683c\u5f0f\u4e0d\u6b63\u786e"],
+                    required: [/[\S]+/, "Required items cannot be empty"],
+                    phone: [/^1\d{10}$/, "Please enter the correct phone number"],
+                    email: [/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/, "Incorrect email format"],
+                    url: [/^(#|(http(s?)):\/\/|\/\/)[^\s]+\.[^\s]+$/, "Incorrect link format"],
                     number: function (e) {
-                        if (!e || isNaN(e)) return "\u53ea\u80fd\u586b\u5199\u6570\u5b57"
+                        if (!e || isNaN(e)) return "Only numbers can be filled in"
                     },
-                    date: [/^(\d{4})[-\/](\d{1}|0\d{1}|1[0-2])([-\/](\d{1}|0\d{1}|[1-2][0-9]|3[0-1]))*$/, "\u65e5\u671f\u683c\u5f0f\u4e0d\u6b63\u786e"],
-                    identity: [/(^\d{15}$)|(^\d{17}(x|X|\d)$)/, "\u8bf7\u8f93\u5165\u6b63\u786e\u7684\u8eab\u4efd\u8bc1\u53f7"]
+                    date: [/^(\d{4})[-\/](\d{1}|0\d{1}|1[0-2])([-\/](\d{1}|0\d{1}|[1-2][0-9]|3[0-1]))*$/, "Incorrect date format"],
+                    identity: [/(^\d{15}$)|(^\d{17}(x|X|\d)$)/, "Please enter the correct ID number number"]
                 }, autocomplete: null
             }
         }, i = (t.prototype.set = function (e) {
