@@ -4851,7 +4851,7 @@ layui.define(["layer", "util"], function (e) {
                     e = e || a.find("input,textarea");
                     i.autocomplete && e.attr("autocomplete", i.autocomplete)
                 }, select: function (e) {
-                    var p, c = "\u8bf7\u9009\u62e9", m = "layui-form-select", g = "layui-select-title",
+                    var p, c = "Please select", m = "layui-form-select", g = "layui-select-title",
                         k = "layui-select-none", x = "", e = e || a.find("select"), b = function (e, t) {
                             C(e.target).parent().hasClass(g) && !t || (C("." + m).removeClass(m + "ed " + m + "up"), p && x && p.val(x)), p = null
                         }, u = function (a, e, t) {
