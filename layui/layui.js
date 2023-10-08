@@ -4929,7 +4929,7 @@ layui.define(["layer", "util"], function (e) {
                         var s, o = "string" == typeof i.attr("lay-search"), t = t && !t.value && t.innerHTML || c,
                             r = C(['<div class="' + (o ? "" : "layui-unselect ") + m, (n ? " layui-select-disabled" : "") + '">', '<div class="' + g + '">', '<input type="text" placeholder="' + d.escape(C.trim(t)) + '" value="' + d.escape(C.trim(l ? r.html() : "")) + '"' + (!n && o ? "" : " readonly") + ' class="layui-input' + (o ? "" : " layui-unselect") + (n ? " " + E : "") + '">', '<i class="layui-edge"></i></div>', '<dl class="layui-anim layui-anim-upbit' + (i.find("optgroup")[0] ? " layui-select-group" : "") + '">', (t = i.find("*"), s = [], layui.each(t, function (e, t) {
                                 0 !== e || t.value ? "optgroup" === t.tagName.toLowerCase() ? s.push("<dt>" + t.label + "</dt>") : s.push('<dd lay-value="' + d.escape(t.value) + '" class="' + (l === t.value ? T : "") + (t.disabled ? " " + E : "") + '">' + C.trim(t.innerHTML) + "</dd>") : s.push('<dd lay-value="" class="layui-select-tips">' + C.trim(t.innerHTML || c) + "</dd>")
-                            }), 0 === s.length && s.push('<dd lay-value="" class="' + E + '">\u6ca1\u6709\u9009\u9879</dd>'), s.join("") + "</dl>"), "</div>"].join(""));
+                            }), 0 === s.length && s.push('<dd lay-value="" class="' + E + '">No Data</dd>'), s.join("") + "</dl>"), "</div>"].join(""));
                         a[0] && a.remove(), i.after(r), u.call(this, r, n, o)
                     })
                 }, checkbox: function (e) {
